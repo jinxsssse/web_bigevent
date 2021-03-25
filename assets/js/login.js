@@ -46,7 +46,7 @@ $(function() {
             // 模拟人的点击行为
             setTimeout(function() {
                 $('#link_login').click();
-            }, 1000);
+            }, 500);
         })
     });
     // 监听登录表单的提交事件
@@ -63,8 +63,11 @@ $(function() {
             layer.msg('登录成功');
             // 将登录成功得到的token字符串，保存到localstorage中
             localStorage.setItem('token', res.token)
+            setTimeout(function() {
                 //    跳转到后台页面
-            location.href = '/index.html'
+                location.href = '/index.html'
+            }, 500)
         })
-    })
+    });
+
 })
